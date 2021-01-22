@@ -25,7 +25,7 @@ class StoreProvider with ChangeNotifier{
     notifyListeners();
   }
 
-  //Inventory
+  //####Section#### {Inventory functions}
   List<Product> _products = [
     Product(
         name: "Pegasus 30",
@@ -386,11 +386,10 @@ class StoreProvider with ChangeNotifier{
   bool isProductInCart(Product product){
 
     //Check if a product is present in a cart
-    //TODO:CHANGE TO ID
 
     for(int i=0;i<_cart.length;i++){
       Product obj = _cart[i];
-      if(product.name == obj.name){
+      if(product.id == obj.name){
         return true;
       }
     }
