@@ -7,7 +7,6 @@ import 'package:provider/provider.dart';
 
 
 GlobalKey _signInFormKey;
-final _scaffoldKey = GlobalKey<ScaffoldState>();
 
 String _email="",_password="",_confirmPassword="",_phoneNumber="",_altPhoneNumber="",_otp="";
 

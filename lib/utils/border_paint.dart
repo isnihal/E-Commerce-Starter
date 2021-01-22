@@ -2,6 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class BorderPainter extends CustomPainter {
+
+  //Custom paint,that draws a cool border on containers
+
   @override
   void paint(Canvas canvas, Size size) {
     final width = 1.0;
