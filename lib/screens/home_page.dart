@@ -96,7 +96,7 @@ class _HomePageState extends State<HomePage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         CheckboxListTile(
-                          title: Text("Adidas"),
+                          title: Text("Brand I"),
                           activeColor: Colors.black87,
                           value: _selectedBrands[0],
                           onChanged: (newValue) {
@@ -107,7 +107,7 @@ class _HomePageState extends State<HomePage> {
                           controlAffinity: ListTileControlAffinity.leading,  //  <-- leading Checkbox
                         ),
                         CheckboxListTile(
-                          title: Text("Nike"),
+                          title: Text("Brand II"),
                           activeColor: Colors.black87,
                           value: _selectedBrands[1],
                           onChanged: (newValue) {
@@ -118,7 +118,7 @@ class _HomePageState extends State<HomePage> {
                           controlAffinity: ListTileControlAffinity.leading,  //  <-- leading Checkbox
                         ),
                         CheckboxListTile(
-                          title: Text("New Balance"),
+                          title: Text("Brand III"),
                           activeColor: Colors.black87,
                           value: _selectedBrands[2],
                           onChanged: (newValue) {
@@ -129,7 +129,7 @@ class _HomePageState extends State<HomePage> {
                           controlAffinity: ListTileControlAffinity.leading,  //  <-- leading Checkbox
                         ),
                         CheckboxListTile(
-                          title: Text("Skechers"),
+                          title: Text("Brand IV"),
                           activeColor: Colors.black87,
                           value: _selectedBrands[3],
                           onChanged: (newValue) {
@@ -199,24 +199,14 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(
                   height: ScreenUtil().setHeight(24),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    IconButton(
-                      padding: EdgeInsets.zero,
-                      constraints: BoxConstraints(),
-                      icon: Icon(Icons.keyboard_arrow_left,size: ScreenUtil().setWidth(32),),
-                      onPressed: (){
-                        Navigator.of(context).pop();
-                      },
-                    ),
-                    IconButton(
-                      padding: EdgeInsets.zero,
-                      constraints: BoxConstraints(),
-                      icon: Icon(Icons.menu),
-                      onPressed: _toggle,
-                    )
-                  ],
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: IconButton(
+                    padding: EdgeInsets.zero,
+                    constraints: BoxConstraints(),
+                    icon: Icon(Icons.menu),
+                    onPressed: _toggle,
+                  ),
                 ),
                 SizedBox(
                   height: ScreenUtil().setHeight(32),
@@ -233,7 +223,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     SizedBox(width: ScreenUtil().setWidth(8),),
                     Text(
-                      "Sneakers",
+                      "Product",
                       style: TextStyle(
                           color: Colors.black87,
                           fontSize: 26,

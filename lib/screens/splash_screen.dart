@@ -76,8 +76,8 @@ class _SplashScreenState extends State<SplashScreen> {
       resizeToAvoidBottomPadding: false,
       backgroundColor: Theme.of(context).backgroundColor,
       body: Center(
-        child: Image.asset("assets/images/logo.png",width: ScreenUtil().setWidth(172),height: ScreenUtil().setHeight(96)),
-      ),
+        child: Text("Splash Screen",style: TextStyle(color: Colors.black87,fontSize: 24,fontWeight: FontWeight.bold),),
+      )
     );
   }
 }

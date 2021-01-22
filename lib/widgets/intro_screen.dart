@@ -41,13 +41,13 @@ class IntroScreen extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Text("Design",style: TextStyle(color: Colors.black87,fontWeight: FontWeight.bold,fontSize: 28),),
+                  Text("Onboarding",style: TextStyle(color: Colors.black87,fontWeight: FontWeight.bold,fontSize: 28),),
                   SizedBox(width: ScreenUtil().setWidth(8),),
-                  Text("Sneakers",style: TextStyle(color: Colors.black87,fontWeight: FontWeight.normal,fontSize: 28),)
+                  Text("Screen I",style: TextStyle(color: Colors.black87,fontWeight: FontWeight.normal,fontSize: 28),)
                 ],
               ),
               SizedBox(height: ScreenUtil().setHeight(8),),
-              Text("A curated list of collectible\nlimited edition sneakers",textAlign: TextAlign.start,style: TextStyle(color: Colors.black87,fontWeight: FontWeight.normal,fontSize: 18),),
+              Text("Lorem ipsum dolor sit amet\nconsectetur adipiscing elit",textAlign: TextAlign.start,style: TextStyle(color: Colors.black87,fontWeight: FontWeight.normal,fontSize: 18),),
               SizedBox(height: 64,),
               Align(
                 alignment: Alignment.centerRight,
@@ -95,13 +95,13 @@ class IntroScreen extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Text("Design",style: TextStyle(color: Colors.black87,fontWeight: FontWeight.bold,fontSize: 28),),
+                  Text("Onboarding",style: TextStyle(color: Colors.black87,fontWeight: FontWeight.bold,fontSize: 28),),
                   SizedBox(width: ScreenUtil().setWidth(8),),
-                  Text("Sneakers",style: TextStyle(color: Colors.black87,fontWeight: FontWeight.normal,fontSize: 28),)
+                  Text("Screen II",style: TextStyle(color: Colors.black87,fontWeight: FontWeight.normal,fontSize: 28),)
                 ],
               ),
               SizedBox(height: ScreenUtil().setHeight(8),),
-              Text("Find these unique pieces at\namazing prices",textAlign: TextAlign.start,style: TextStyle(color: Colors.black87,fontWeight: FontWeight.normal,fontSize: 18),),
+              Text("Lorem ipsum dolor sit amet\nconsectetur adipiscing elit",textAlign: TextAlign.start,style: TextStyle(color: Colors.black87,fontWeight: FontWeight.normal,fontSize: 18),),
               SizedBox(height: 64,),
               Align(
                 alignment: Alignment.centerRight,
@@ -149,13 +149,13 @@ class IntroScreen extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Text("Design",style: TextStyle(color: Colors.black87,fontWeight: FontWeight.bold,fontSize: 28),),
+                  Text("Onboarding",style: TextStyle(color: Colors.black87,fontWeight: FontWeight.bold,fontSize: 28),),
                   SizedBox(width: ScreenUtil().setWidth(8),),
-                  Text("Sneakers",style: TextStyle(color: Colors.black87,fontWeight: FontWeight.normal,fontSize: 28),)
+                  Text("Screen III",style: TextStyle(color: Colors.black87,fontWeight: FontWeight.normal,fontSize: 28),)
                 ],
               ),
               SizedBox(height: ScreenUtil().setHeight(8),),
-              Text("Hurry up!\nOnly limited stocks available",textAlign: TextAlign.start,style: TextStyle(color: Colors.black87,fontWeight: FontWeight.normal,fontSize: 18),),
+              Text("Lorem ipsum dolor sit amet\nconsectetur adipiscing elit",textAlign: TextAlign.start,style: TextStyle(color: Colors.black87,fontWeight: FontWeight.normal,fontSize: 18),),
               SizedBox(height: 64,),
               Align(
                 alignment: Alignment.centerRight,
@@ -203,13 +203,13 @@ class IntroScreen extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Text("Design",style: TextStyle(color: Colors.black87,fontWeight: FontWeight.bold,fontSize: 28),),
+                  Text("Onboarding",style: TextStyle(color: Colors.black87,fontWeight: FontWeight.bold,fontSize: 28),),
                   SizedBox(width: ScreenUtil().setWidth(8),),
-                  Text("Sneakers",style: TextStyle(color: Colors.black87,fontWeight: FontWeight.normal,fontSize: 28),)
+                  Text("Screen IV",style: TextStyle(color: Colors.black87,fontWeight: FontWeight.normal,fontSize: 28),)
                 ],
               ),
               SizedBox(height: ScreenUtil().setHeight(8),),
-              Text("Rated as the best Sneakers app\nacross the App Store",textAlign: TextAlign.start,style: TextStyle(color: Colors.black87,fontWeight: FontWeight.normal,fontSize: 18),),
+              Text("Lorem ipsum dolor sit amet\nconsectetur adipiscing elit",textAlign: TextAlign.start,style: TextStyle(color: Colors.black87,fontWeight: FontWeight.normal,fontSize: 18),),
               SizedBox(height: 64,),
               Align(
                 alignment: Alignment.centerRight,

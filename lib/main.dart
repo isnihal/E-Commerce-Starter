@@ -5,6 +5,7 @@ import 'package:e_commerce_starter/screens/home_page.dart';
 import 'package:e_commerce_starter/screens/onboarding_screen.dart';
 import 'package:e_commerce_starter/screens/product_page.dart';
 import 'package:e_commerce_starter/screens/search_screen.dart';
+import 'package:e_commerce_starter/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.white,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: OnBoardingScreen(),
+        home: SplashScreen(),
       ),
     );
   }
