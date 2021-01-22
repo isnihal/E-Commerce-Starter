@@ -6,13 +6,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
-class ShoeWidget extends StatelessWidget {
+class ProductWidget extends StatelessWidget {
 
   //Constructor
-  final Shoe shoe;
+  final Product product;
   final bool hasMargin;
 
-  ShoeWidget({@required this.shoe,@required this.hasMargin});
+  ProductWidget({@required this.product,@required this.hasMargin});
 
   @override
   Widget build(BuildContext context) {
@@ -21,11 +21,11 @@ class ShoeWidget extends StatelessWidget {
     ScreenUtil.init(context, designSize: Size(414, 896), allowFontScaling: true);
 
     //Provider
-    final provider = Provider.of<ShoeProvider>(context,listen: false);
+    final provider = Provider.of<StoreProvider>(context,listen: false);
 
     return GestureDetector(
       onTap: (){
-        provider.selectedShoe = shoe;
+        provider.selectedProduct = product;
         Navigator.of(context).pushNamed(ProductPage.routeName);
       },
       child: Container(
@@ -55,16 +55,16 @@ class ShoeWidget extends StatelessWidget {
                 child: Stack(
                   fit: StackFit.expand,
                   children: [
-                    shoe.discount!=0? Text("-${shoe.discount}% Off"):SizedBox(),
-                    Hero(tag: shoe.name,child: Image.asset(shoe.imageURL)),
+                    product.discount!=0? Text("-${product.discount}% Off"):SizedBox(),
+                    Hero(tag: product.name,child: Image.asset(product.imageURL)),
                   ],
                 )
               ),
             ),
             SizedBox(height: ScreenUtil().setHeight(8),),
-            Text(shoe.name,style: TextStyle(color: Colors.grey[600],fontWeight: FontWeight.normal,fontSize: 18),),
+            Text(product.name,style: TextStyle(color: Colors.grey[600],fontWeight: FontWeight.normal,fontSize: 18),),
             SizedBox(height: ScreenUtil().setHeight(4),),
-            Text("\$${shoe.price}",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
+            Text("\$${product.price}",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
           ],
         ),
       ),

@@ -72,8 +72,8 @@ class _HomePageState extends State<HomePage> {
     ScreenUtil.init(context, designSize: Size(414, 896), allowFontScaling: true);
 
     //Provider data
-    var provider = Provider.of<ShoeProvider>(context);
-    List<Shoe> _shoes = provider.filteredShoes;
+    var provider = Provider.of<StoreProvider>(context);
+    List<Product> _products = provider.filteredProducts;
     var _selectedBrands = provider.selectedBrands;
 
     //Alert dialog function
@@ -148,7 +148,7 @@ class _HomePageState extends State<HomePage> {
                     child: Text("Done",style: TextStyle(color: Colors.black87),),
                     onPressed: () {
                       setState(() {
-                        provider.setFilteredShoes();
+                        provider.filterProducts();
                         Navigator.of(context).pop();
                       });
                     },
@@ -329,7 +329,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Expanded(
                   child: WaterfallFlow.builder(
-                    itemCount: _shoes.length,
+                    itemCount: _products.length,
                     padding: EdgeInsets.zero,
                     gridDelegate: SliverWaterfallFlowDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
@@ -338,9 +338,9 @@ class _HomePageState extends State<HomePage> {
                     ),
                     itemBuilder: (ctx,index){
                       if(index==1)
-                        return ShoeWidget(shoe: _shoes[index], hasMargin: true);
+                        return ProductWidget(product: _products[index], hasMargin: true);
                       else
-                        return ShoeWidget(shoe: _shoes[index], hasMargin: false);
+                        return ProductWidget(product: _products[index], hasMargin: false);
                     },
                   ),
                 )

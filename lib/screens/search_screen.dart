@@ -24,7 +24,7 @@ class _SearchScreenState extends State<SearchScreen> {
   bool _isSearching = false;
 
   //Object declerations
-  List<Shoe> _selectedShoes;
+  List<Product> _selectedShoes;
 
   @override
   void initState() {
@@ -57,8 +57,8 @@ class _SearchScreenState extends State<SearchScreen> {
         context, designSize: Size(414, 896), allowFontScaling: true);
 
     //Provider data
-    var provider = Provider.of<ShoeProvider>(context);
-    List<Shoe> _shoes = provider.shoes;
+    var provider = Provider.of<StoreProvider>(context);
+    List<Product> _shoes = provider.products;
 
     return SafeArea(
       child: Scaffold(
@@ -128,7 +128,7 @@ class _SearchScreenState extends State<SearchScreen> {
                               crossAxisSpacing: ScreenUtil().setWidth(30),
                             ),
                             itemBuilder: (ctx,index){
-                              return ShoeWidget(shoe: _selectedShoes[index], hasMargin: false);
+                              return ProductWidget(product: _selectedShoes[index], hasMargin: false);
                             },
                           ),
                         ):Padding(

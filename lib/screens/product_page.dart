@@ -31,8 +31,8 @@ class _ProductPageState extends State<ProductPage> {
     ScreenUtil.init(context, designSize: Size(414, 896), allowFontScaling: true);
 
     //Provider data
-    var provider = Provider.of<ShoeProvider>(context,listen: false);
-    Shoe shoe = provider.selectedShoe;
+    var provider = Provider.of<StoreProvider>(context,listen: false);
+    Product product = provider.selectedProduct;
 
     return SafeArea(
       child: Scaffold(
@@ -73,20 +73,20 @@ class _ProductPageState extends State<ProductPage> {
                           IconButton(
                             padding: EdgeInsets.zero,
                             constraints: BoxConstraints(),
-                            icon: provider.isShoeInWishlist(shoe)? Icon(Icons.favorite):Icon(Icons.favorite_border),
+                            icon: provider.isProductInWishlist(product)? Icon(Icons.favorite):Icon(Icons.favorite_border),
                             onPressed: (){
                               setState(() {
-                                if(provider.isShoeInWishlist(shoe)) provider.removeFromWishList(shoe);
-                                else provider.addToWishList(shoe);
+                                if(provider.isProductInWishlist(product)) provider.removeFromWishList(product);
+                                else provider.addToWishList(product);
                               });
                             },
                           )
                         ],
                       ),
                       Hero(
-                          tag: shoe.name,
+                          tag: product.name,
                           child: Image.asset(
-                            shoe.imageURL,
+                            product.imageURL,
                             height: ScreenUtil().setHeight(414),
                             width: ScreenUtil().setWidth(414),)
                       ),
@@ -98,9 +98,9 @@ class _ProductPageState extends State<ProductPage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               SizedBox(height: ScreenUtil().setHeight(8),),
-                              Text(shoe.name,style: TextStyle(color: Colors.grey[600],fontWeight: FontWeight.normal,fontSize: 18),),
+                              Text(product.name,style: TextStyle(color: Colors.grey[600],fontWeight: FontWeight.normal,fontSize: 18),),
                               SizedBox(height: ScreenUtil().setHeight(4),),
-                              Text("\$${shoe.price}",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
+                              Text("\$${product.price}",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
                             ],
                           ),
                           Container(
@@ -132,8 +132,8 @@ class _ProductPageState extends State<ProductPage> {
                                               constraints: BoxConstraints(),
                                               icon: Icon(Icons.add,color: Colors.white,),
                                               onPressed: (){
-                                                if(!provider.isShoeInCart(shoe)){
-                                                  provider.addToCart(shoe);
+                                                if(!provider.isProductInCart(product)){
+                                                  provider.addToCart(product);
                                                   _scaffoldKey.currentState.showSnackBar(SnackBar(
                                                     content: Text("Item added to cart"),
                                                     duration: Duration(seconds: 1),
@@ -141,7 +141,7 @@ class _ProductPageState extends State<ProductPage> {
                                                       label: "Remove Item",
                                                       onPressed: (){
                                                        _scaffoldKey.currentState.removeCurrentSnackBar();
-                                                        provider.removeFromCart(shoe);
+                                                        provider.removeFromCart(product);
                                                       },
                                                     ),
                                                   ));
@@ -183,7 +183,7 @@ class _ProductPageState extends State<ProductPage> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(shoe.description,overflow: TextOverflow.fade,),
+                                Text(product.description,overflow: TextOverflow.fade,),
                                 SizedBox(height: ScreenUtil().setHeight(42),)
                               ],
                             )
@@ -197,8 +197,8 @@ class _ProductPageState extends State<ProductPage> {
             ),
             GestureDetector(
               onVerticalDragEnd: (_){
-                if(!provider.isShoeInCart(shoe)) {
-                  provider.addToCart(shoe);
+                if(!provider.isProductInCart(product)) {
+                  provider.addToCart(product);
                 }
                 Navigator.of(context).pushNamed(CartScreen.routeName);
               },

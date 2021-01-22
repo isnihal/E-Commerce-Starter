@@ -21,7 +21,7 @@ class IntroScreen extends StatelessWidget {
     ScreenUtil.init(context, designSize: Size(414, 896), allowFontScaling: true);
 
     //Provider data
-    var provider = Provider.of<ShoeProvider>(context,listen: false);
+    var provider = Provider.of<StoreProvider>(context,listen: false);
 
     //Return intro screen based on the screen number
     return

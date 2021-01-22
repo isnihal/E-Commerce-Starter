@@ -21,8 +21,8 @@ class WishListScreen extends StatelessWidget{
     ScreenUtil.init(context, designSize: Size(414, 896), allowFontScaling: true);
 
     //Provider data
-    var provider = Provider.of<ShoeProvider>(context);
-    List<Shoe> products = provider.wishlist;
+    var provider = Provider.of<StoreProvider>(context);
+    List<Product> products = provider.wishlist;
 
     return WillPopScope(
       onWillPop: (){

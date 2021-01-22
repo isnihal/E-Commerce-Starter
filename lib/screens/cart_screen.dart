@@ -19,8 +19,8 @@ class CartScreen extends StatelessWidget {
     var mediaQuery = MediaQuery.of(context);
 
     //Provider data
-    var provider = Provider.of<ShoeProvider>(context);
-    List<Shoe> _cart = provider.cart;
+    var provider = Provider.of<StoreProvider>(context);
+    List<Product> _cart = provider.cart;
 
 
     //Screen Util Init
@@ -178,7 +178,9 @@ class CartScreen extends StatelessWidget {
                 ),
               ),
               onPressed: (){
-                Navigator.of(context).pushReplacementNamed(ProfilePage.routeName);
+                Scaffold.of(context).showSnackBar(
+                  SnackBar(content: Text("Proceed to payment gateway"))
+                );
               },
             )
           ],
