@@ -10,138 +10,36 @@ class StoreProvider with ChangeNotifier{
 
   //####Section#### {Inventory functions}
   List<Product> _products = [
+    //TODO: This should be empty when fetching data from the API
     Product(
-        name: "Pegasus 30",
-        brand: "Nike",
+        name: "Product I",
+        brand: "Brand I",
         imageURL: "assets/images/nike1.png",
-        price: 345,
-        discount: 0,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    ),
-    Product(
-        name: "Air Force",
-        brand: "Nike",
-        //colors: [//colors.black,//colors.green],
-        imageURL: "assets/images/nike2.png",
-        price: 499,
-        discount: 0,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    ),
-    Product(
-        name: "Air Zoom",
-        brand: "Nike",
-        //colors: [//colors.grey,//colors.black],
-        imageURL: "assets/images/nike3.png",
-        price: 300,
-        discount: 0,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    ),
-    Product(
-        name: "Air Max",
-        brand: "Nike",
-        //colors: [//colors.white,//colors.red],
-        imageURL: "assets/images/nike4.png",
-        price: 345,
-        discount: 5,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-    ),
-    Product(
-        name: "Air Jordan Max",
-        brand: "Nike",
-        //colors: [//colors.white12,//colors.indigo],
-        imageURL: "assets/images/nike5.png",
         price: 999,
         discount: 0,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
     ),
     Product(
-        name: "Ultraboost",
-        brand: "Adidas",
-        //colors: [//colors.pink[50],//colors.black],
-        imageURL: "assets/images/adidas1.png",
-        price: 645,
-        discount: 4,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-    ),
-    Product(
-        name: "Adizero",
-        brand: "Adidas",
-        //colors: [//colors.white12,//colors.red],
-        imageURL: "assets/images/adidas2.png",
-        price: 199,
+        name: "Product II",
+        brand: "Brand II",
+        imageURL: "assets/images/nike1.png",
+        price: 999,
         discount: 0,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
     ),
     Product(
-        name: "Bounce I",
-        brand: "Adidas",
-        //colors: [//colors.white12,//colors.orange],
-        imageURL: "assets/images/adidas3.png",
-        price: 200,
-        discount: 30,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-    ),
-    Product(
-        name: "Solar Drive",
-        brand: "Adidas",
-        //colors: [//colors.white12,//colors.pink],
-        imageURL: "assets/images/adidas4.png",
-        price: 315,
+        name: "Product III",
+        brand: "Brand III",
+        imageURL: "assets/images/nike1.png",
+        price: 999,
         discount: 0,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
     ),
     Product(
-        name: "Superstar",
-        brand: "Adidas",
-        //colors: [//colors.black,//colors.blueAccent],
-        imageURL: "assets/images/adidas5.png",
-        price: 399,
-        discount: 0,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-    ),
-    Product(
-        name: "990 v4",
-        brand: "New Balance",
-        //colors: [//colors.grey[200],//colors.grey],
-        imageURL: "assets/images/nb1.png",
-        price: 199,
-        discount: 0,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-    ),
-    Product(
-        name: "1080 v6",
-        brand: "New Balance",
-        //colors: [//colors.red,//colors.lightBlueAccent],
-        imageURL: "assets/images/nb2.png",
-        price: 500,
-        discount: 0,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-    ),
-    Product(
-        name: "Ultra Road",
-        brand: "Skechers",
-        //colors: [//colors.black,//colors.red],
-        imageURL: "assets/images/skechers1.png",
-        price: 300,
-        discount: 0,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-    ),
-    Product(
-        name: "Razor 3",
-        brand: "Skechers",
-        //colors: [//colors.lightBlueAccent,//colors.pink],
-        imageURL: "assets/images/skechers2.png",
-        price: 269,
+        name: "Product IV",
+        brand: "Brand IV",
+        imageURL: "assets/images/nike1.png",
+        price: 999,
         discount: 0,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     ),
@@ -160,139 +58,36 @@ class StoreProvider with ChangeNotifier{
   var selectedBrands = [true,true,true,true];
 
   List<Product> _filteredProducts = [
-
+    //TODO: This should be empty when fetching data from the API
     Product(
-        name: "Pegasus 30",
-        brand: "Nike",
+        name: "Product I",
+        brand: "Brand I",
         imageURL: "assets/images/nike1.png",
-        price: 345,
-        discount: 0,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    ),
-    Product(
-        name: "Air Force",
-        brand: "Nike",
-        //colors: [//colors.black,//colors.green],
-        imageURL: "assets/images/nike2.png",
-        price: 499,
-        discount: 0,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    ),
-    Product(
-        name: "Air Zoom",
-        brand: "Nike",
-        //colors: [//colors.grey,//colors.black],
-        imageURL: "assets/images/nike3.png",
-        price: 300,
-        discount: 0,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    ),
-    Product(
-        name: "Air Max",
-        brand: "Nike",
-        //colors: [//colors.white,//colors.red],
-        imageURL: "assets/images/nike4.png",
-        price: 345,
-        discount: 5,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-    ),
-    Product(
-        name: "Air Jordan Max",
-        brand: "Nike",
-        //colors: [//colors.white12,//colors.indigo],
-        imageURL: "assets/images/nike5.png",
         price: 999,
         discount: 0,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
     ),
     Product(
-        name: "Ultraboost",
-        brand: "Adidas",
-        //colors: [//colors.pink[50],//colors.black],
-        imageURL: "assets/images/adidas1.png",
-        price: 645,
-        discount: 4,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-    ),
-    Product(
-        name: "Adizero",
-        brand: "Adidas",
-        //colors: [//colors.white12,//colors.red],
-        imageURL: "assets/images/adidas2.png",
-        price: 199,
+        name: "Product II",
+        brand: "Brand II",
+        imageURL: "assets/images/nike1.png",
+        price: 999,
         discount: 0,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
     ),
     Product(
-        name: "Bounce I",
-        brand: "Adidas",
-        //colors: [//colors.white12,//colors.orange],
-        imageURL: "assets/images/adidas3.png",
-        price: 200,
-        discount: 30,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-    ),
-    Product(
-        name: "Solar Drive",
-        brand: "Adidas",
-        //colors: [//colors.white12,//colors.pink],
-        imageURL: "assets/images/adidas4.png",
-        price: 315,
+        name: "Product III",
+        brand: "Brand III",
+        imageURL: "assets/images/nike1.png",
+        price: 999,
         discount: 0,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
     ),
     Product(
-        name: "Superstar",
-        brand: "Adidas",
-        //colors: [//colors.black,//colors.blueAccent],
-        imageURL: "assets/images/adidas5.png",
-        price: 399,
-        discount: 0,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-    ),
-    Product(
-        name: "990 v4",
-        brand: "New Balance",
-        //colors: [//colors.grey[200],//colors.grey],
-        imageURL: "assets/images/nb1.png",
-        price: 199,
-        discount: 0,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-    ),
-    Product(
-        name: "1080 v6",
-        brand: "New Balance",
-        //colors: [//colors.red,//colors.lightBlueAccent],
-        imageURL: "assets/images/nb2.png",
-        price: 500,
-        discount: 0,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-    ),
-    Product(
-        name: "Ultra Road",
-        brand: "Skechers",
-        //colors: [//colors.black,//colors.red],
-        imageURL: "assets/images/skechers1.png",
-        price: 300,
-        discount: 0,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-    ),
-    Product(
-        name: "Razor 3",
-        brand: "Skechers",
-        //colors: [//colors.lightBlueAccent,//colors.pink],
-        imageURL: "assets/images/skechers2.png",
-        price: 269,
+        name: "Product IV",
+        brand: "Brand IV",
+        imageURL: "assets/images/nike1.png",
+        price: 999,
         discount: 0,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     ),
