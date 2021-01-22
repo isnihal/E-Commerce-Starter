@@ -52,6 +52,8 @@ class StoreProvider with ChangeNotifier{
   }
 
   //####Section#### {Network functions}
+  static String _baseUrl = values.BASE_URL;
+
 
   ////####Section#### {Cart Management Functions}
 

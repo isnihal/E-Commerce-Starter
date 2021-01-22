@@ -6,6 +6,8 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 
 class OnBoardingScreen extends StatefulWidget {
 
+  static const routeName = "/onboarding_screen";
+
   @override
   _OnBoardingScreenState createState() => _OnBoardingScreenState();
 }
