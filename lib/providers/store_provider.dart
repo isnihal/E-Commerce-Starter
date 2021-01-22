@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+
 import 'package:provider/provider.dart';
+
 import '../models/product.dart';
+
+import 'package:e_commerce_starter/values.dart' as values;
 
 class StoreProvider with ChangeNotifier{
 
@@ -331,18 +335,18 @@ class StoreProvider with ChangeNotifier{
 
   double get shippingFee{
 
-    //TODO: Access shipping fee from a file
+    //Define shipping fee in this function
 
     if(_cart.isEmpty) return 0;
-    else return  _cart.length*4.5;
+    else return totalSum * values.SHIPPING_FEE;
   }
 
   double get tax{
 
-    //TODO: Get tax from a file
+    //Calculate taxes in this function
 
     if(_cart.isEmpty) return 0;
-    else return totalSum  * 0.15;
+    else return totalSum  * values.TAXES;
   }
 
   double get totalAmount{
