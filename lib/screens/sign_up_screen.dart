@@ -1,3 +1,4 @@
+import 'package:e_commerce_starter/screens/home_page.dart';
 import 'package:e_commerce_starter/screens/login_screen.dart';
 
 import 'package:flutter/material.dart';
@@ -229,6 +230,7 @@ class _SignUpFormState extends State<SignUpForm> {
                 TextFormField(
                  onFieldSubmitted: (value){
                    //TODO: Register the user
+                   Navigator.of(context).pushReplacementNamed(HomePage.routeName);
                  },
                   onChanged: (value){
                     //_password = value;
