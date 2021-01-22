@@ -1,5 +1,5 @@
 import 'package:e_commerce_starter/models/product.dart';
-import 'package:e_commerce_starter/providers/shoes_provider.dart';
+import 'package:e_commerce_starter/providers/store_provider.dart';
 import 'package:e_commerce_starter/screens/cart_screen.dart';
 import 'package:e_commerce_starter/utils/border_paint.dart';
 
@@ -113,7 +113,7 @@ class _ProductPageState extends State<ProductPage> {
                                   borderRadius: BorderRadius.circular(15)
                               ),
                               onPressed: (){
-                                //provider.addToCart(shoe);
+                                //provider.addToCart(product);
                                 Navigator.of(context).pushNamed(CartScreen.routeName);
                               },
                               child: Center(

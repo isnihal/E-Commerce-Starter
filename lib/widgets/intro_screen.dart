@@ -1,4 +1,4 @@
-import 'package:e_commerce_starter/providers/shoes_provider.dart';
+import 'package:e_commerce_starter/providers/store_provider.dart';
 import 'package:e_commerce_starter/screens/home_page.dart';
 
 import 'package:flutter/material.dart';

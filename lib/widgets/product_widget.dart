@@ -1,9 +1,10 @@
-import 'package:e_commerce_starter/providers/shoes_provider.dart';
+import 'package:e_commerce_starter/providers/store_provider.dart';
 import 'package:e_commerce_starter/screens/product_page.dart';
 import 'package:e_commerce_starter/models/product.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:provider/provider.dart';
 
 class ProductWidget extends StatelessWidget {

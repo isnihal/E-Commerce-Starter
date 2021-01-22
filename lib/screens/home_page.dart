@@ -1,10 +1,10 @@
 import 'package:e_commerce_starter/models/product.dart';
-import 'package:e_commerce_starter/providers/shoes_provider.dart';
+import 'package:e_commerce_starter/providers/store_provider.dart';
 import 'package:e_commerce_starter/screens/cart_screen.dart';
 import 'package:e_commerce_starter/screens/search_screen.dart';
 import 'package:e_commerce_starter/screens/wishlist_screen.dart';
 import 'package:e_commerce_starter/utils/border_paint.dart';
-import 'package:e_commerce_starter/widgets/shoe_widget.dart';
+import 'package:e_commerce_starter/widgets/product_widget.dart';
 
 import 'package:flutter/material.dart';
 

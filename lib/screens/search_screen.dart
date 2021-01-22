@@ -1,6 +1,6 @@
 import 'package:e_commerce_starter/models/product.dart';
-import 'package:e_commerce_starter/providers/shoes_provider.dart';
-import 'package:e_commerce_starter/widgets/shoe_widget.dart';
+import 'package:e_commerce_starter/providers/store_provider.dart';
+import 'package:e_commerce_starter/widgets/product_widget.dart';
 
 import 'package:flutter/material.dart';
 
@@ -24,13 +24,13 @@ class _SearchScreenState extends State<SearchScreen> {
   bool _isSearching = false;
 
   //Object declerations
-  List<Product> _selectedShoes;
+  List<Product> _selectedproducts;
 
   @override
   void initState() {
 
     //Initial search result is empty
-    _selectedShoes = [];
+    _selectedproducts = [];
 
     //Animation handler
     Future.delayed(Duration.zero,(){
@@ -58,7 +58,7 @@ class _SearchScreenState extends State<SearchScreen> {
 
     //Provider data
     var provider = Provider.of<StoreProvider>(context);
-    List<Product> _shoes = provider.products;
+    List<Product> _products = provider.products;
 
     return SafeArea(
       child: Scaffold(
@@ -84,7 +84,7 @@ class _SearchScreenState extends State<SearchScreen> {
                           left: ScreenUtil().setWidth(8),
                           right: ScreenUtil().setWidth(8),
                         ),
-                          child: _selectedShoes.length==0? Container(
+                          child: _selectedproducts.length==0? Container(
                             color: Theme.of(context).backgroundColor,
                             child: SingleChildScrollView(
                               physics: BouncingScrollPhysics(),
@@ -115,7 +115,7 @@ class _SearchScreenState extends State<SearchScreen> {
                             ),
                           ):
                           WaterfallFlow.builder(
-                            itemCount: _selectedShoes.length,
+                            itemCount: _selectedproducts.length,
                             padding: EdgeInsets.only(
                               left: ScreenUtil().setWidth(24),
                               right: ScreenUtil().setWidth(24),
@@ -128,7 +128,7 @@ class _SearchScreenState extends State<SearchScreen> {
                               crossAxisSpacing: ScreenUtil().setWidth(30),
                             ),
                             itemBuilder: (ctx,index){
-                              return ProductWidget(product: _selectedShoes[index], hasMargin: false);
+                              return ProductWidget(product: _selectedproducts[index], hasMargin: false);
                             },
                           ),
                         ):Padding(
@@ -178,9 +178,9 @@ class _SearchScreenState extends State<SearchScreen> {
                                   _isSearching = true;
                                 }
                                 setState(() {
-                                  _selectedShoes.clear();
-                                  _selectedShoes.addAll(
-                                      _shoes.where((element) =>
+                                  _selectedproducts.clear();
+                                  _selectedproducts.addAll(
+                                      _products.where((element) =>
                                           element.name.toLowerCase().contains(
                                               value.toLowerCase()) || element.brand.toLowerCase().contains(
                                               value.toLowerCase())

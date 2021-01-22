@@ -1,5 +1,6 @@
-import 'package:e_commerce_starter/providers/shoes_provider.dart';
+
 import 'package:e_commerce_starter/models/product.dart';
+import 'package:e_commerce_starter/providers/store_provider.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,11 +10,11 @@ import 'package:provider/provider.dart';
 class CartItem extends StatelessWidget {
 
   //Constructor
-  final Product shoe;
+  final Product product;
   final int cardNum;
   final bool isWishList;
 
-  CartItem({@required this.shoe,@required this.cardNum,@required this.isWishList});
+  CartItem({@required this.product,@required this.cardNum,@required this.isWishList});
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +52,7 @@ class CartItem extends StatelessWidget {
                   overflow: Overflow.visible,
                   fit: StackFit.expand,
                   children: [
-                    Hero(tag: shoe.name,child: Image.asset(shoe.imageURL)),
+                    Hero(tag: product.name,child: Image.asset(product.imageURL)),
                     Align(
                       alignment: Alignment.topLeft,
                       child:  Padding(
@@ -74,9 +75,9 @@ class CartItem extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(shoe.name,style: TextStyle(color: Colors.grey[600],fontWeight: FontWeight.normal,fontSize: 18),),
+                  Text(product.name,style: TextStyle(color: Colors.grey[600],fontWeight: FontWeight.normal,fontSize: 18),),
                   SizedBox(height: ScreenUtil().setHeight(4),),
-                  Text("\$${shoe.price}",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
+                  Text("\$${product.price}",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
                 ],
               ),
               Align(
@@ -84,8 +85,8 @@ class CartItem extends StatelessWidget {
                 child: IconButton(
                   padding: EdgeInsets.zero,
                   onPressed: (){
-                    if(!isWishList) provider.removeFromCart(shoe);
-                    else provider.removeFromWishList(shoe);
+                    if(!isWishList) provider.removeFromCart(product);
+                    else provider.removeFromWishList(product);
                   },
                   icon: Icon(Icons.delete,color: Colors.black,),
                 ),

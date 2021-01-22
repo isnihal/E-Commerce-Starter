@@ -1,5 +1,5 @@
 import 'package:e_commerce_starter/models/product.dart';
-import 'package:e_commerce_starter/providers/shoes_provider.dart';
+import 'package:e_commerce_starter/providers/store_provider.dart';
 import 'package:e_commerce_starter/widgets/cart_item.dart';
 
 import 'package:flutter/material.dart';
@@ -88,7 +88,7 @@ class CartScreen extends StatelessWidget {
                               crossAxisSpacing: ScreenUtil().setWidth(30),
                             ),
                             itemBuilder: (ctx,index){
-                              return CartItem(shoe: _cart[index],cardNum: index,isWishList: false,);
+                              return CartItem(product: _cart[index],cardNum: index,isWishList: false,);
                             },
                           ),
                         )
