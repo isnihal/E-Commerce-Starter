@@ -2,9 +2,11 @@ import 'package:e_commerce_starter/providers/auth_provider.dart';
 import 'package:e_commerce_starter/providers/store_provider.dart';
 import 'package:e_commerce_starter/screens/cart_screen.dart';
 import 'package:e_commerce_starter/screens/home_page.dart';
+import 'package:e_commerce_starter/screens/login_screen.dart';
 import 'package:e_commerce_starter/screens/onboarding_screen.dart';
 import 'package:e_commerce_starter/screens/product_page.dart';
 import 'package:e_commerce_starter/screens/search_screen.dart';
+import 'package:e_commerce_starter/screens/sign_up_screen.dart';
 import 'package:e_commerce_starter/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -25,6 +27,8 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'E commerce starter',
         routes: {
+          LoginScreen.routeName: (ctx)=>LoginScreen(),
+          SignUpScreen.routeName: (ctx)=>SignUpScreen(),
           OnBoardingScreen.routeName: (ctx)=>OnBoardingScreen(),
           HomePage.routeName: (ctx)=>HomePage(),
           ProductPage.routeName: (ctx)=>ProductPage(),

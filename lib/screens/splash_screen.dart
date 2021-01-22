@@ -62,7 +62,10 @@ class _SplashScreenState extends State<SplashScreen> {
       Navigator.of(context).pushReplacementNamed(OnBoardingScreen.routeName);
       prefs.setBool("onBoarded", true);
     }
-    else  Navigator.of(context).pushReplacementNamed(HomePage.routeName);
+    else{
+      //TODO: CHECK IF USER IS AUTHENTICATED
+      Navigator.of(context).pushReplacementNamed(HomePage.routeName);
+    }
   }
 
 

@@ -1,5 +1,6 @@
 import 'package:e_commerce_starter/providers/store_provider.dart';
 import 'package:e_commerce_starter/screens/home_page.dart';
+import 'package:e_commerce_starter/screens/login_screen.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -232,7 +233,7 @@ class IntroScreen extends StatelessWidget {
                       child: Icon(Icons.done,color: Colors.white,),
                     ),
                     onPressed: (){
-                      Navigator.of(context).pushNamed(HomePage.routeName);
+                      Navigator.of(context).pushNamed(LoginScreen.routeName);
                     },
                   ),
                 ),

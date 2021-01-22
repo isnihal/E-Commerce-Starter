@@ -14,7 +14,9 @@ class OnBoardingScreen extends StatefulWidget {
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
-  //Controller
+  //Each intro screen is a widget
+
+  //Swiper Controller
   SwiperController _swiperController = new SwiperController();
 
   @override
@@ -24,6 +26,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         body: Container(
             width: double.infinity,
             height: double.infinity,
+            //To remove the splash
             child: NotificationListener(
               onNotification: (OverscrollIndicatorNotification overscroll) {
                 overscroll.disallowGlow();
