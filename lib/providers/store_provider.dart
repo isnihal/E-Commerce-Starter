@@ -8,27 +8,6 @@ import 'package:e_commerce_starter/values.dart' as values;
 
 class StoreProvider with ChangeNotifier{
 
-  //####Section#### {UI Functions}
-  Product selectedProduct;
-  
-  //If brand/category filters of product is involved
-  var selectedBrands = [true,true,true,true];
-
-  void filterProducts(){
-    //Function to filter products
-    
-    _filteredProducts.clear();
-    _products.forEach((item) {
-      
-      if(selectedBrands[0] && item.brand=="Brand I") _filteredProducts.add(item);
-      else if(selectedBrands[1] && item.brand=="Brand II") _filteredProducts.add(item);
-      else if(selectedBrands[2] && item.brand=="Brand III") _filteredProducts.add(item);
-      else if(selectedBrands[3] && item.brand=="Brand IV") _filteredProducts.add(item);
-    
-    });
-    notifyListeners();
-  }
-
   //####Section#### {Inventory functions}
   List<Product> _products = [
     Product(
@@ -174,6 +153,12 @@ class StoreProvider with ChangeNotifier{
     return [..._products];
   }
 
+  //####Section#### {UI Functions}
+  Product selectedProduct;
+
+  //If brand/category filters of product is involved
+  var selectedBrands = [true,true,true,true];
+
   List<Product> _filteredProducts = [
 
     Product(
@@ -315,6 +300,21 @@ class StoreProvider with ChangeNotifier{
 
   List<Product> get filteredProducts {
     return [..._filteredProducts];
+  }
+
+  void filterProducts(){
+    //Function to filter products
+
+    _filteredProducts.clear();
+    _products.forEach((item) {
+
+      if(selectedBrands[0] && item.brand=="Brand I") _filteredProducts.add(item);
+      else if(selectedBrands[1] && item.brand=="Brand II") _filteredProducts.add(item);
+      else if(selectedBrands[2] && item.brand=="Brand III") _filteredProducts.add(item);
+      else if(selectedBrands[3] && item.brand=="Brand IV") _filteredProducts.add(item);
+
+    });
+    notifyListeners();
   }
 
   ////####Section#### {Accounting Functions}
